@@ -14,6 +14,17 @@ Dir[Rails.root.join("spec/support/**/*.rb")].each { |f| require f }
 ActiveRecord::Migration.check_pending! if defined?(ActiveRecord::Migration)
 
 module Helpers
+
+  def login(user, pwd)
+    visit '/login'
+
+    within '#login' do
+      fill_in 'Username', with: user
+      fill_in 'Password', with: pwd
+      click_on 'Login'
+    end
+  end
+
 end
 
 RSpec.configure do |config|
@@ -44,6 +55,9 @@ RSpec.configure do |config|
   #     --seed 1234
   config.order = "random"
 
-  config.include Capybara::DSL
+  config.include FactoryGirl::Syntax::Methods
+
+  config.include Capybara::DSL, :type => :feature
+
   config.include Helpers
 end

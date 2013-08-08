@@ -1,0 +1,13 @@
+<div class="col-4">
+  <div class='listing clearfix'>
+    <img src='http://www.digitaltrends.com/wp-content/uploads/2013/05/new-macbook-air-header.jpg'>
+    <h2><%= listing.title %></h2>
+    <p><%= listing.description %></p>
+    <h3 class='price pull-left'>
+      <%= price_pounds(listing.current_price_pennies) %>
+    </h3>
+
+    <%= button_to 'Bid', bid_listing_path(listing), 
+                  remote: true, class: 'btn bid btn-default btn-lg pull-right' %>
+  </div>
+</div>

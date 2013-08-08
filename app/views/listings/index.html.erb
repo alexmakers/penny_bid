@@ -1,0 +1,11 @@
+<h1>Listings</h1>
+
+<% listings.each_slice(3) do |listings_row| %>
+  <div class="row listings">
+    <%= render listings_row %>
+  </div>
+<% end %>
+
+  <%= render('no_listings') if listings.empty? %>
+
+</div>

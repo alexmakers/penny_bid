@@ -1,0 +1,5 @@
+<%= form_for Listing.new do |f| %>
+  <%= f.text_field :title, placeholder: 'Title' %>
+  <%= f.text_area :description %>
+  <%= f.submit 'Create' %>
+<% end %>

@@ -1,4 +1,14 @@
 PennyBid::Application.routes.draw do
+  resources :listings do
+    member do
+      post 'bid'
+    end
+  end
+
+  devise_for :admins, path: 'admin', path_names: { sign_in: 'login', sign_out: 'logout' }
+
+  root 'listings#index'
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
