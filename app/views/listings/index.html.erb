@@ -1,4 +1,7 @@
 <h1>Listings</h1>
+  <%= content_tag :div, contenteditable: true do %>
+    Hello
+  <% end %>
 
 <% listings.each_slice(3) do |listings_row| %>
   <div class="row listings">

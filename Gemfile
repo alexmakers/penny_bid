@@ -3,6 +3,8 @@ source 'https://rubygems.org'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.0.0'
 
+gem 'rails_12factor'
+
 # Use postgresql as the database for Active Record
 gem 'pg'
 
@@ -31,6 +33,8 @@ gem 'devise'
 gem 'factory_girl_rails', '~> 4.0'
 
 gem 'anjlab-bootstrap-rails', require: 'bootstrap-rails', github: 'anjlab/bootstrap-rails', branch: '3.0.0'
+
+gem 'websocket-rails'
 
 group :doc do
   # bundle exec rake doc:rails generates the API under doc/api.
