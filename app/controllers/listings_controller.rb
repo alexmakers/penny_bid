@@ -22,7 +22,7 @@ class ListingsController < ApplicationController
   def bid
     @listing = Listing.find(params[:id])
     @listing.bid!
-    Pusher[:bids].trigger 'new',
+    websocket[:bids].trigger 'new',
       { id: @listing.id, 
         price: view_context.price_pounds(@listing.current_price_pennies) }
   end
