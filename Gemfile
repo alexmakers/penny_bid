@@ -34,6 +34,8 @@ gem 'factory_girl_rails', '~> 4.0'
 
 gem 'anjlab-bootstrap-rails', require: 'bootstrap-rails', github: 'anjlab/bootstrap-rails', branch: '3.0.0'
 
+gem 'stripe'
+
 group :development do
   gem 'websocket-rails'
 end

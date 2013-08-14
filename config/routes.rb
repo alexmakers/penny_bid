@@ -1,4 +1,6 @@
 PennyBid::Application.routes.draw do
+  resources :credits
+  
   resources :listings do
     member do
       post 'bid'

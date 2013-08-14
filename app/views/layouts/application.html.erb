@@ -7,6 +7,8 @@
     <%= stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true %>
     <%= javascript_include_tag "http://js.pusher.com/2.1/pusher.min.js" %>
     <%= javascript_include_tag "websocket_rails/main" if defined?(WebsocketRails) %>
+    <%= javascript_include_tag "https://checkout.stripe.com/v2/checkout.js" %>
+    
     <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
     
     <%= csrf_meta_tags %>
